@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== M1918 BAR ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>M1918_BAR</defName>
+    <label>M1918A2 BAR</label>
+    <description>An ancient automatic rifle. Outdated even for its time, although it does pack a punch.</description>
+    <graphicData>
+      <texPath>Things/Weapons/M1918_BAR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>21000</WorkToMake>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.47</SwayFactor>
+      <Bulk>13.15</Bulk>
+      <Mass>8.8</Mass>
+      <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>75</Steel>
+      <Component>5</Component>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.42</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_3006Springfield_FMJ</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>62</range>
+		<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>20</magazineSize>
+        <reloadTime>4</reloadTime>
+        <ammoSet>AmmoSet_3006Springfield</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+        <aiAimMode>SuppressFire</aiAimMode>
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+</ThingDefs>

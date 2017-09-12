@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== M1 Garand ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>M1_Garand</defName>
+    <label>M1 Garand</label>
+    <description>An ancient battle rifle. Purportedly the 'Greatest battle implement ever devised.'</description>
+    <graphicData>
+      <texPath>Things/Weapons/M1_Garand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractGarand</soundInteract>
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.54</SwayFactor>
+      <Bulk>11.0</Bulk>
+      <Mass>4.4</Mass>
+      <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <Component>2</Component>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.06</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_3006Springfield_FMJ</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>55</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>8</magazineSize>
+        <reloadTime>2.5</reloadTime>
+        <ammoSet>AmmoSet_3006Springfield</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+
+</ThingDefs>

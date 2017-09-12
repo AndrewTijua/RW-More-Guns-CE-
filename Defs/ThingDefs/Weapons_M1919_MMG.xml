@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== M1919 MMG ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>M1919_MMG</defName>
+    <label>M1919A6 Browning MMG</label>
+    <description>An ancient machine gun. Exceedingly lethal but very heavy.</description>
+    <graphicData>
+      <texPath>Things/Weapons/M1919_MMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.92</SwayFactor>
+      <Bulk>16.43</Bulk>
+      <Mass>14.0</Mass>
+      <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>110</Steel>
+      <Component>6</Component>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.11</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_3006Springfield_FMJ</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>75</range>
+		<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>250</magazineSize>
+        <reloadTime>7.8</reloadTime>
+        <ammoSet>AmmoSet_3006Springfield</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+        <aiAimMode>SuppressFire</aiAimMode>
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+</ThingDefs>
