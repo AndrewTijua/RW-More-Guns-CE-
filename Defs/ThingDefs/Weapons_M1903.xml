@@ -13,7 +13,7 @@
     <soundInteract>InteractRifle</soundInteract>
     <statBases>
       <WorkToMake>11500</WorkToMake>
-      <SightsEfficiency>1.0</SightsEfficiency>
+      <SightsEfficiency>1.4</SightsEfficiency>
       <ShotSpread>0.05</ShotSpread>
       <SwayFactor>1.49</SwayFactor>
       <Bulk>10.97</Bulk>
@@ -61,7 +61,7 @@
     <soundInteract>InteractRifle</soundInteract>
     <statBases>
       <WorkToMake>13500</WorkToMake>
-      <SightsEfficiency>2.17</SightsEfficiency>
+      <SightsEfficiency>2.5</SightsEfficiency>
       <ShotSpread>0.05</ShotSpread>
       <SwayFactor>1.54</SwayFactor>
       <Bulk>10.97</Bulk>

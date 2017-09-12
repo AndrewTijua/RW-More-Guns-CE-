@@ -13,7 +13,7 @@
     <soundInteract>InteractGarand</soundInteract>
     <statBases>
       <WorkToMake>14000</WorkToMake>
-      <SightsEfficiency>1.0</SightsEfficiency>
+      <SightsEfficiency>1.2</SightsEfficiency>
       <ShotSpread>0.05</ShotSpread>
       <SwayFactor>1.54</SwayFactor>
       <Bulk>11.0</Bulk>
