@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== SIG P220 ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>P220</defName>
+    <label>SIG P220</label>
+    <description>An ancient pistol designed to provide a powerful cartridge in a manageable package. Has an interesting abouble action only trigger.</description>
+    <graphicData>
+      <texPath>Things/Weapons/P220</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>0.95</SwayFactor>
+      <Bulk>1.98</Bulk>
+      <Mass>0.86</Mass>
+      <RangedWeapon_Cooldown>0.40</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+      <Component>3</Component>
+	  <Chemfuel>5</Chemfuel>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>3.29</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_10mmAuto_FMJ</projectileDef>
+        <warmupTime>0.6</warmupTime>
+        <range>12</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>8</magazineSize>
+        <reloadTime>4</reloadTime>
+        <ammoSet>AmmoSet_10mmAuto</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiAimMode>Snapshot</aiAimMode>
+      </li>
+    </comps>
+	<recipeMaker>
+      <researchPrerequisite>CE_AdvancedFirearms</researchPrerequisite>
+    </recipeMaker>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+  </ThingDef>
+
+</ThingDefs>

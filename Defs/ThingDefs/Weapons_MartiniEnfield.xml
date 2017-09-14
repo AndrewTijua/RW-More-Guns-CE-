@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== Martini-Enfield ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>MartiniEnfield</defName>
+    <label>Martini-Enfield</label>
+    <description>An ancient single shot rifle. Useful for emergency defence and hunting of non-dangerous game.</description>
+    <graphicData>
+      <texPath>Things/Weapons/MartiniEnfield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>7000</WorkToMake>
+      <SightsEfficiency>1.2</SightsEfficiency>
+      <ShotSpread>0.03</ShotSpread>
+      <SwayFactor>1.49</SwayFactor>
+      <Bulk>12.5</Bulk>
+      <Mass>3.8</Mass>
+      <RangedWeapon_Cooldown>0.87</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.08</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_303British_FMJ</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>55</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>0.8</reloadTime>
+        <ammoSet>AmmoSet_303British</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</ThingDefs>

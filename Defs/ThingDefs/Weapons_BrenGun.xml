@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== Bren Gun ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Bren Gun</defName>
+    <label>Bren Gun</label>
+    <description>An ancient machine gun. The magazine is atop the gun, so the sights are offset to one side.</description>
+    <graphicData>
+      <texPath>Things/Weapons/BrenGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>30500</WorkToMake>
+      <SightsEfficiency>0.98</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.42</SwayFactor>
+      <Bulk>12.56</Bulk>
+      <Mass>8.7</Mass>
+      <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>70</Steel>
+      <Component>5</Component>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.33</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_303British_FMJ</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>75</range>
+		<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>30</magazineSize>
+        <reloadTime>4</reloadTime>
+        <ammoSet>AmmoSet_303British</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+        <aiAimMode>SuppressFire</aiAimMode>
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+</ThingDefs>

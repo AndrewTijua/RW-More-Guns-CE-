@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== Bren 10 ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Bren10</defName>
+    <label>Bren 10</label>
+    <description>An ancient pistol designed alongside the 10mm auto cartridge. Achieved cult status but was a commercial failure.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Bren_10</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>7000</WorkToMake>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>1.11</SwayFactor>
+      <Bulk>2.22</Bulk>
+      <Mass>1.1</Mass>
+      <RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+      <Component>3</Component>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.95</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_10mmAuto_FMJ</projectileDef>
+        <warmupTime>0.6</warmupTime>
+        <range>12</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>10</magazineSize>
+        <reloadTime>4</reloadTime>
+        <ammoSet>AmmoSet_10mmAuto</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiAimMode>Snapshot</aiAimMode>
+      </li>
+    </comps>
+	<recipeMaker>
+      <researchPrerequisite>CE_AdvancedFirearms</researchPrerequisite>
+    </recipeMaker>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+  </ThingDef>
+
+</ThingDefs>
