@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== TT-33 ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TT33</defName>
+    <label>TT-33</label>
+    <description>An ancient pistol designed to replace an ancient revolver. Pretty typical of the times.</description>
+    <graphicData>
+      <texPath>Things/Weapons/TT33</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>7000</WorkToMake>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>0.95</SwayFactor>
+      <Bulk>1.97</Bulk>
+      <Mass>0.94</Mass>
+      <RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+      <Component>3</Component>
+	  <Chemfuel>7</Chemfuel>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.62</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x25mmTokarev_FMJ</projectileDef>
+        <warmupTime>0.6</warmupTime>
+        <range>12</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>8</magazineSize>
+        <reloadTime>4</reloadTime>
+        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiAimMode>Snapshot</aiAimMode>
+      </li>
+    </comps>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+  </ThingDef>
+
+</ThingDefs>

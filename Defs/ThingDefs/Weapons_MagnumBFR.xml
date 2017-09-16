@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== Magnum BFR ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>MagnumBFR</defName>
+    <label>Magnum BFR</label>
+    <description>A huge revolver designed to be a huge revolver. Cannot be effectively fired with one hand.</description>
+    <graphicData>
+      <texPath>Things/Weapons/MagnumBFR</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.13</ShotSpread>
+      <SwayFactor>0.67</SwayFactor>
+      <Bulk>4.45</Bulk>
+      <Mass>2.20</Mass>
+      <RangedWeapon_Cooldown>0.50</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>35</Steel>
+      <Component>2</Component>
+	  <WoodLog>5</WoodLog>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>3.27</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_4570Gov_FMJ</projectileDef>
+        <warmupTime>0.7</warmupTime>
+        <range>16</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>5</magazineSize>
+        <reloadTime>4.25</reloadTime>
+        <ammoSet>AmmoSet_4570Gov</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+	<recipeMaker>
+      <researchPrerequisite>CE_AdvancedFirearms</researchPrerequisite>
+    </recipeMaker>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+    </weaponTags>
+  </ThingDef>
+
+</ThingDefs>

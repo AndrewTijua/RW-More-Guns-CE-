@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+ <!-- ==================== Glock 22 ==================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Glock22</defName>
+    <label>Glock 22</label>
+    <description>An entry in an ancient series of polymer pistols. This one fires the .40 SW cartridge.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Glock_20</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>0.92</SwayFactor>
+      <Bulk>2.04</Bulk>
+      <Mass>0.72</Mass>
+      <RangedWeapon_Cooldown>0.40</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+      <Component>3</Component>
+	  <Chemfuel>5</Chemfuel>
+    </costList>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>3.25</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_40SW_FMJ</projectileDef>
+        <warmupTime>0.6</warmupTime>
+        <range>12</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>15</magazineSize>
+        <reloadTime>4</reloadTime>
+        <ammoSet>AmmoSet_40SW</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+		<aiAimMode>Snapshot</aiAimMode>
+      </li>
+    </comps>
+	<recipeMaker>
+      <researchPrerequisite>CE_AdvancedFirearms</researchPrerequisite>
+    </recipeMaker>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+  </ThingDef>
+
+</ThingDefs>
