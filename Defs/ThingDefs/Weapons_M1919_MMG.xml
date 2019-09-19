@@ -2,7 +2,7 @@
 <ThingDefs>
  <!-- ==================== M1919 MMG ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>M1919_MMG</defName>
     <label>M1919A6 Browning MMG</label>
     <description>An ancient machine gun. Exceedingly lethal but very heavy.</description>
@@ -10,7 +10,7 @@
       <texPath>Things/Weapons/M1919_MMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
       <WorkToMake>40000</WorkToMake>
       <SightsEfficiency>1.0</SightsEfficiency>
@@ -22,7 +22,7 @@
     </statBases>
     <costList>
       <Steel>110</Steel>
-      <Component>6</Component>
+      <ComponentIndustrial>6</ComponentIndustrial>
       <WoodLog>10</WoodLog>
     </costList>
     <verbs>
@@ -30,7 +30,7 @@
         <recoilAmount>1.11</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_3006Springfield_FMJ</projectileDef>
+        <defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
         <warmupTime>1.1</warmupTime>
         <range>75</range>
 		<ticksBetweenBurstShots>6</ticksBetweenBurstShots>

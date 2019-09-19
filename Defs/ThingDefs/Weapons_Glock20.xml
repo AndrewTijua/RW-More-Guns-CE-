@@ -2,15 +2,15 @@
 <ThingDefs>
  <!-- ==================== Glock 20 ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>Glock20</defName>
     <label>Glock 20</label>
     <description>An entry in an ancient series of polymer pistols. This one fires the 10mm Auto cartridge.</description>
     <graphicData>
-      <texPath>Things/Weapons/Glock20</texPath>
+      <texPath>Things/Weapons/Glock_20</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>7500</WorkToMake>
       <SightsEfficiency>0.7</SightsEfficiency>
@@ -22,7 +22,7 @@
     </statBases>
     <costList>
       <Steel>20</Steel>
-      <Component>3</Component>
+      <ComponentIndustrial>3</ComponentIndustrial>
 	  <Chemfuel>5</Chemfuel>
     </costList>
     <verbs>
@@ -30,7 +30,7 @@
         <recoilAmount>3.29</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-		<projectileDef>Bullet_10mmAuto_FMJ</projectileDef>
+		<defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>12</range>
         <soundCast>ShotPistol</soundCast>

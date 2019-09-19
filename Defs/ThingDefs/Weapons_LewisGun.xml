@@ -2,7 +2,7 @@
 <ThingDefs>
  <!-- ==================== Lewis Gun ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>LewisGun</defName>
     <label>Lewis Gun</label>
     <description>An ancient machine gun. Feeds rounds from an interesting 'pan' magazine atop the gun.</description>
@@ -10,7 +10,7 @@
       <texPath>Things/Weapons/LewisGun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
       <WorkToMake>34000</WorkToMake>
       <SightsEfficiency>1.0</SightsEfficiency>
@@ -22,7 +22,7 @@
     </statBases>
     <costList>
       <Steel>100</Steel>
-      <Component>5</Component>
+      <ComponentIndustrial>5</ComponentIndustrial>
       <WoodLog>10</WoodLog>
     </costList>
     <verbs>
@@ -30,7 +30,7 @@
         <recoilAmount>1.08</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_303British_FMJ</projectileDef>
+        <defaultProjectile>Bullet_303British_FMJ</defaultProjectile>
         <warmupTime>1.1</warmupTime>
         <range>75</range>
 		<ticksBetweenBurstShots>7</ticksBetweenBurstShots>

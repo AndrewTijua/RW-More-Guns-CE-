@@ -2,7 +2,7 @@
 <ThingDefs>
  <!-- ==================== Colt Delta Elite ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>DElite</defName>
     <label>Colt Delta Elite</label>
     <description>Based on the familiar design of the 1911, this pistol is chambered in the slightlt more powerful 10mm Auto cartridge.</description>
@@ -10,7 +10,7 @@
       <texPath>Things/Weapons/DElite</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>7000</WorkToMake>
       <SightsEfficiency>0.7</SightsEfficiency>
@@ -22,14 +22,14 @@
     </statBases>
     <costList>
       <Steel>25</Steel>
-      <Component>3</Component>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
         <recoilAmount>2.95</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_10mmAuto_FMJ</projectileDef>
+        <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>12</range>
         <soundCast>ShotPistol</soundCast>

@@ -2,7 +2,7 @@
 <ThingDefs>
  <!-- ==================== M1903A3 ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>M1903A3_Springfield</defName>
     <label>M1903A3 Springfield</label>
     <description>An ancient bolt action rifle. Popular for hunting game.</description>
@@ -10,7 +10,7 @@
       <texPath>Things/Weapons/M1903A3_Springfield</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
       <WorkToMake>11500</WorkToMake>
       <SightsEfficiency>1.4</SightsEfficiency>
@@ -22,7 +22,7 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
+      <ComponentIndustrial>1</ComponentIndustrial>
       <WoodLog>15</WoodLog>
     </costList>
     <verbs>
@@ -30,7 +30,7 @@
         <recoilAmount>2.18</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_3006Springfield_FMJ</projectileDef>
+        <defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
         <warmupTime>1.1</warmupTime>
         <range>55</range>
         <soundCast>ShotSniperRifle</soundCast>
@@ -50,7 +50,7 @@
     </comps>
   </ThingDef>
   
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>M1903A4_Sniper</defName>
     <label>M1903A4 Sniper</label>
     <description>An ancient scoped bolt action rifle. Popular for hunting nazis.</description>
@@ -58,7 +58,7 @@
       <texPath>Things/Weapons/M1903A4_Sniper</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
       <WorkToMake>13500</WorkToMake>
       <SightsEfficiency>2.5</SightsEfficiency>
@@ -70,7 +70,7 @@
     </statBases>
     <costList>
       <Steel>55</Steel>
-      <Component>1</Component>
+      <ComponentIndustrial>1</ComponentIndustrial>
       <WoodLog>15</WoodLog>
     </costList>
     <verbs>
@@ -78,7 +78,7 @@
         <recoilAmount>2.11</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_3006Springfield_FMJ</projectileDef>
+        <defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
         <warmupTime>1.24</warmupTime>
         <range>75</range>
         <soundCast>ShotSniperRifle</soundCast>

@@ -2,15 +2,15 @@
 <ThingDefs>
  <!-- ==================== TT-33 ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>TT33</defName>
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
+    <defName>TT33_CE</defName>
     <label>TT-33</label>
     <description>An ancient pistol designed to replace an ancient revolver. Pretty typical of the times.</description>
     <graphicData>
       <texPath>Things/Weapons/TT33</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>7000</WorkToMake>
       <SightsEfficiency>0.7</SightsEfficiency>
@@ -22,7 +22,7 @@
     </statBases>
     <costList>
       <Steel>20</Steel>
-      <Component>3</Component>
+      <ComponentIndustrial>3</ComponentIndustrial>
 	  <Chemfuel>7</Chemfuel>
     </costList>
     <verbs>
@@ -30,7 +30,7 @@
         <recoilAmount>2.62</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_762x25mmTokarev_FMJ</projectileDef>
+        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>12</range>
         <soundCast>ShotPistol</soundCast>

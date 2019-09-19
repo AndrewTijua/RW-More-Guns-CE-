@@ -2,7 +2,7 @@
 <ThingDefs>
  <!-- ==================== Martini-Enfield ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>MartiniEnfield</defName>
     <label>Martini-Enfield</label>
     <description>An ancient single shot rifle. Useful for emergency defence and hunting of non-dangerous game.</description>
@@ -10,7 +10,7 @@
       <texPath>Things/Weapons/MartiniEnfield</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
       <WorkToMake>7000</WorkToMake>
       <SightsEfficiency>1.2</SightsEfficiency>
@@ -29,7 +29,7 @@
         <recoilAmount>2.08</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_303British_FMJ</projectileDef>
+        <defaultProjectile>Bullet_303British_FMJ</defaultProjectile>
         <warmupTime>1.1</warmupTime>
         <range>55</range>
         <soundCast>ShotSniperRifle</soundCast>

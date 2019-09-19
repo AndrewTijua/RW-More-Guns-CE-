@@ -2,7 +2,7 @@
 <ThingDefs>
  <!-- ==================== Bren 10 ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>Bren10</defName>
     <label>Bren 10</label>
     <description>An ancient pistol designed alongside the 10mm auto cartridge. Achieved cult status but was a commercial failure.</description>
@@ -10,7 +10,7 @@
       <texPath>Things/Weapons/Bren_10</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>7000</WorkToMake>
       <SightsEfficiency>0.7</SightsEfficiency>
@@ -22,14 +22,14 @@
     </statBases>
     <costList>
       <Steel>25</Steel>
-      <Component>3</Component>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
         <recoilAmount>2.95</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_10mmAuto_FMJ</projectileDef>
+        <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>12</range>
         <soundCast>ShotPistol</soundCast>

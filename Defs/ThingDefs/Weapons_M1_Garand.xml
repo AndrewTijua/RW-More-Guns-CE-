@@ -2,7 +2,7 @@
 <ThingDefs>
  <!-- ==================== M1 Garand ==================== -->
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>M1_Garand</defName>
     <label>M1 Garand</label>
     <description>An ancient battle rifle. Purportedly the 'Greatest battle implement ever devised.'</description>
@@ -22,7 +22,7 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>2</Component>
+      <ComponentIndustrial>2</ComponentIndustrial>
       <WoodLog>15</WoodLog>
     </costList>
     <verbs>
@@ -30,7 +30,7 @@
         <recoilAmount>2.06</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_3006Springfield_FMJ</projectileDef>
+        <defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
         <warmupTime>1.1</warmupTime>
         <range>55</range>
         <soundCast>ShotSniperRifle</soundCast>
